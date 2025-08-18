@@ -19,7 +19,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import dev.seabat.android.sampleanimation.navigation.Screen
+import dev.seabat.android.sampleanimation.ui.navigation.Screen
 import dev.seabat.android.sampleanimation.ui.theme.SampleAnimationTheme
 
 @OptIn(ExperimentalMaterial3Api::class)

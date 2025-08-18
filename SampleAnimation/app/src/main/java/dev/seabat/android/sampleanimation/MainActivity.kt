@@ -7,7 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.rememberNavController
-import dev.seabat.android.sampleanimation.navigation.NavGraph
+import dev.seabat.android.sampleanimation.ui.navigation.NavGraph
 import dev.seabat.android.sampleanimation.ui.theme.SampleAnimationTheme
 
 class MainActivity : ComponentActivity() {

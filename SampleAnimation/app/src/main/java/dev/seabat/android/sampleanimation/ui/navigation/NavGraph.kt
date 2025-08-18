@@ -1,4 +1,4 @@
-package dev.seabat.android.sampleanimation.navigation
+package dev.seabat.android.sampleanimation.ui.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier

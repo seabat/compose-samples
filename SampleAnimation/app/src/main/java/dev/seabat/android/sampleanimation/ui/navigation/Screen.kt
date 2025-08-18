@@ -1,4 +1,4 @@
-package dev.seabat.android.sampleanimation.navigation
+package dev.seabat.android.sampleanimation.ui.navigation
 
 sealed class Screen(val route: String) {
     object Home : Screen("home")
