@@ -25,6 +25,11 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import dev.seabat.android.sampleanimation.ui.components.BreathingButton
 
+/**
+ * Sample 1 Screen
+ *
+ * see. https://medium.com/@hiren6997/10-jetpack-compose-animations-that-will-wow-your-users-6dda5342a567
+ */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun Sample1Screen(
