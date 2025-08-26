@@ -31,6 +31,9 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
+/**
+ * see. https://medium.com/@hiren6997/10-jetpack-compose-animations-that-will-wow-your-users-6dda5342a567
+ */
 @Composable
 fun ElasticSearchBar() {
     var expanded by remember { mutableStateOf(false) }
