@@ -18,3 +18,12 @@ An animated expandable list using LazyColumn in Jetpack Compose.
 参考記事: [Building a Custom Animated Expandable/Collapsed List Component with Jetpack Compose Using LazyColumn](https://medium.com/@ramadan123sayed/building-a-custom-animated-expandable-list-with-jetpack-compose-1774a9328a32)  
 
 <img src="expandable-list/docs/Screenshot_1.png" width="200"> 
+
+
+## SampleAnimation
+
+Jetpack Compose のアニメーションサンプル集。
+
+参考記事: [10 Jetpack Compose Animations That Will Wow Your Users](https://medium.com/@hiren6997/10-jetpack-compose-animations-that-will-wow-your-users-6dda5342a567)
+
+<img src="SampleAnimation/docs/sample-anim.gif" width="200">
