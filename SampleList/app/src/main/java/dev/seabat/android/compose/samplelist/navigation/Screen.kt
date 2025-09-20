@@ -4,5 +4,5 @@ sealed class Screen(val route: String) {
     object Home : Screen("home")
     object Sample1 : Screen("LazyVerticalGrid")
     object Sample2 : Screen("StaggeredGrid")
-    object Sample3 : Screen("sample3")
+    object Sample3 : Screen("FlowRow")
 }

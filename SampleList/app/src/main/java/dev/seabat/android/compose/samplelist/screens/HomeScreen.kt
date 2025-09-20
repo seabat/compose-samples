@@ -70,7 +70,7 @@ fun HomeScreen(
                 onClick = { onNavigateToSample(Screen.Sample3.route) },
                 modifier = Modifier.fillMaxWidth()
             ) {
-                Text("Sample 3")
+                Text(Screen.Sample3.route)
             }
         }
     }
