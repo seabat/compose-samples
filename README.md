@@ -27,3 +27,11 @@ Jetpack Compose のアニメーションサンプル集。
 参考記事: [10 Jetpack Compose Animations That Will Wow Your Users](https://medium.com/@hiren6997/10-jetpack-compose-animations-that-will-wow-your-users-6dda5342a567)
 
 <img src="SampleAnimation/docs/sample-anim.gif" width="200">
+
+## SampleList
+
+Jetpack Compose の List のサンプル集。
+
+参考記事: [Jetpack Compose 8: List and Grid Components with Examples](hhttps://medium.com/@ashfaque-khokhar/jetpack-compose-8-list-and-grid-components-with-examples-1ae952decca0)
+
+<img src="SampleList/docs/sample_list.gif" width="200">
