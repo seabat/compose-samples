@@ -56,7 +56,7 @@ fun HomeScreen(
                 onClick = { onNavigateToSample(Screen.Sample1.route) },
                 modifier = Modifier.fillMaxWidth()
             ) {
-                Text("Sample 1")
+                Text(Screen.Sample1.route)
             }
 
             Button(
