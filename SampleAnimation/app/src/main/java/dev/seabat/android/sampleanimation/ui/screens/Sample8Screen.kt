@@ -77,7 +77,7 @@ fun ProductParallaxHeader(scrollState: LazyListState) {
             Icon(
                 imageVector = Icons.Default.FavoriteBorder,
                 contentDescription = "お気に入り",
-                tint = Color.White,
+                tint = Color.Red,
                 modifier = Modifier.size(24.dp)
             )
         }
