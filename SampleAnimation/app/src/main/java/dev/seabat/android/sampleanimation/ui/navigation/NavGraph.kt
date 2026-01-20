@@ -18,6 +18,7 @@ import dev.seabat.android.sampleanimation.ui.screens.Sample9Screen
 import dev.seabat.android.sampleanimation.ui.screens.Sample10Screen
 import dev.seabat.android.sampleanimation.ui.screens.Sample11Screen
 import dev.seabat.android.sampleanimation.ui.screens.Sample12Screen
+import dev.seabat.android.sampleanimation.ui.screens.Sample13Screen
 
 @Composable
 fun NavGraph(
@@ -127,6 +128,14 @@ fun NavGraph(
 
         composable(Screen.Sample12.route) {
             Sample12Screen(
+                onNavigateBack = {
+                    navController.popBackStack()
+                }
+            )
+        }
+
+        composable(Screen.Sample13.route) {
+            Sample13Screen(
                 onNavigateBack = {
                     navController.popBackStack()
                 }
