@@ -1,5 +1,7 @@
 package dev.seabat.android.sampleanimation.ui.screens
 
+import androidx.compose.animation.core.Spring
+import androidx.compose.animation.core.spring
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -67,8 +69,33 @@ fun Sample11Screen(
                 modifier = Modifier.padding(top = 8.dp),
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
-            
-            PulsatingButton()
+
+            PulsatingButton(
+                dampingRatio = Spring.DampingRatioLowBouncy,
+                stiffness = Spring.StiffnessLow,
+                text = "揺れ弱/アニメーション遅い"
+            )
+
+            // Damping ratio for a medium bouncy spring
+            PulsatingButton(
+                dampingRatio = Spring.DampingRatioHighBouncy,
+                stiffness = Spring.StiffnessLow,
+                text = "揺れ強/アニメーション遅い"
+            )
+
+            // Damping ratio for a medium bouncy spring
+            PulsatingButton(
+                dampingRatio = Spring.DampingRatioLowBouncy,
+                stiffness = Spring.StiffnessHigh,
+                text = "揺れ弱/アニメーション遅い"
+            )
+
+            // Damping ratio for a medium bouncy spring
+            PulsatingButton(
+                dampingRatio = Spring.DampingRatioLowBouncy,
+                stiffness = Spring.StiffnessHigh,
+                text = "揺れ弱/アニメーション速い"
+            )
         }
     }
 }

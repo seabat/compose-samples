@@ -21,11 +21,18 @@ import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 
-/**
- * 押下時に縮み、リリース時に少し跳ね返るような動きをするボタン
- */
+ /**
+  * 押下時に縮み、リリース時に少し跳ね返るような動きをするボタン]
+  * 
+  * @param dampingRatio 揺れ(バウンス)の強さ（値が小さいほどバウンスが強い）
+  * @param stiffness アニメーションの速度（値が大きいほど速い）
+  */
 @Composable
-fun PulsatingButton() {
+fun PulsatingButton(
+    dampingRatio: Float, 
+    stiffness: Float,
+    text: String = "ボタン"
+) {
     var isPressed by remember { mutableStateOf(false) }
     
     val scale by animateFloatAsState(
@@ -53,7 +60,7 @@ fun PulsatingButton() {
         contentColor = MaterialTheme.colorScheme.onPrimary
     ) {
         Text(
-            text = "Tap me!",
+            text = text,
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(horizontal = 24.dp, vertical = 12.dp),
