@@ -142,6 +142,13 @@ fun HomeScreen(
             ) {
                 Text("Sample 13")
             }
+
+            Button(
+                onClick = { onNavigateToSample(Screen.Sample14.route) },
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Text("Sample 14")
+            }
         }
     }
 }
