@@ -121,6 +121,34 @@ fun HomeScreen(
             ) {
                 Text("Sample 10")
             }
+
+            Button(
+                onClick = { onNavigateToSample(Screen.Sample11.route) },
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Text("Sample 11")
+            }
+
+            Button(
+                onClick = { onNavigateToSample(Screen.Sample12.route) },
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Text("Sample 12")
+            }
+
+            Button(
+                onClick = { onNavigateToSample(Screen.Sample13.route) },
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Text("Sample 13")
+            }
+
+            Button(
+                onClick = { onNavigateToSample(Screen.Sample14.route) },
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Text("Sample 14")
+            }
         }
     }
 }
