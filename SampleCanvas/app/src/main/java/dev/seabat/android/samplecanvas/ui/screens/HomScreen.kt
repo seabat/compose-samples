@@ -31,7 +31,7 @@ fun HomeScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Sample Animation") }
+                title = { Text("Sample Canvas") }
             )
         },
         modifier = modifier
@@ -59,6 +59,12 @@ fun HomeScreen(
                 Text("Sample 1")
             }
 
+            Button(
+                onClick = { onNavigateToSample(Screen.Sample2.route) },
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Text("Sample 2")
+            }
         }
     }
 }
