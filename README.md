@@ -35,3 +35,9 @@ Jetpack Compose の List のサンプル集。
 参考記事: [Jetpack Compose 8: List and Grid Components with Examples](hhttps://medium.com/@ashfaque-khokhar/jetpack-compose-8-list-and-grid-components-with-examples-1ae952decca0)
 
 <img src="SampleList/docs/sample_list.gif" width="200">
+
+## SampleCanvas
+
+Jetpack Compose の Canvas API サンプル集。
+
+<img src="SampleCanvas/docs/sample-canvas.gif" width="200">
