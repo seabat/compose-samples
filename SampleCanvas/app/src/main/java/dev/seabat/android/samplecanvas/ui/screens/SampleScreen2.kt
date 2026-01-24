@@ -85,7 +85,7 @@ fun Sample2Screen(
 @Preview(showBackground = true)
 @Composable
 fun Sample2ScreenPreview() {
-    Sample1Screen(
+    Sample2Screen(
         onNavigateBack = {}
     )
 }

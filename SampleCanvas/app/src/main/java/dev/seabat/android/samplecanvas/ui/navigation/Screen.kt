@@ -1,7 +1,8 @@
 package dev.seabat.android.samplecanvas.ui.navigation
 
-sealed class Screen(val route: String) {
-    object Home : Screen("home")
-    object Sample1 : Screen("sample1")
-    object Sample2 : Screen("sample2")
+// Navigation 3 のキー定義
+sealed interface Screen {
+    data object Home : Screen
+    data object Sample1 : Screen
+    data object Sample2 : Screen
 }

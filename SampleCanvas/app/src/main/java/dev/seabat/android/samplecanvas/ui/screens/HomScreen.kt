@@ -25,7 +25,7 @@ import dev.seabat.android.samplecanvas.ui.theme.SampleCanvasTheme
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(
-    onNavigateToSample: (String) -> Unit,
+    onNavigate: (Screen) -> Unit,
     modifier: Modifier = Modifier
 ) {
     Scaffold(
@@ -53,14 +53,14 @@ fun HomeScreen(
             )
 
             Button(
-                onClick = { onNavigateToSample(Screen.Sample1.route) },
+                onClick = { onNavigate(Screen.Sample1) },
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Text("Sample 1")
             }
 
             Button(
-                onClick = { onNavigateToSample(Screen.Sample2.route) },
+                onClick = { onNavigate(Screen.Sample2) },
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Text("Sample 2")
@@ -73,6 +73,6 @@ fun HomeScreen(
 @Composable
 fun HomeScreenPreview() {
     SampleCanvasTheme {
-        HomeScreen(onNavigateToSample = {})
+        HomeScreen(onNavigate = {})
     }
 }

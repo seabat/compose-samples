@@ -5,9 +5,11 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
-import androidx.navigation.compose.rememberNavController
+import androidx.compose.runtime.mutableStateListOf
 import dev.seabat.android.samplecanvas.ui.navigation.MainNavGraph
+import dev.seabat.android.samplecanvas.ui.navigation.Screen
 import dev.seabat.android.samplecanvas.ui.theme.SampleCanvasTheme
 
 class MainActivity : ComponentActivity() {
@@ -16,9 +18,9 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             SampleCanvasTheme {
-                val navController = rememberNavController()
+                val backStack = remember { mutableStateListOf<Screen>(Screen.Home) }
                 MainNavGraph(
-                    navController = navController,
+                    backStack = backStack,
                     modifier = Modifier.fillMaxSize()
                 )
             }
