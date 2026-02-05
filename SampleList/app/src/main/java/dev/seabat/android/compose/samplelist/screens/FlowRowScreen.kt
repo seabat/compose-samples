@@ -1,41 +1,35 @@
 package dev.seabat.android.compose.samplelist.screens
 
-import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.aspectRatio
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.grid.GridCells
-import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.layout.FlowRow
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun Sample1Screen(
+fun FlowRowScreen(
     onNavigateBack: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("LazyVerticalGrid") },
+                title = { Text("Flow Row") },
                 navigationIcon = {
                     IconButton(onClick = onNavigateBack) {
                         Icon(
@@ -48,36 +42,30 @@ fun Sample1Screen(
         },
         modifier = modifier
     ) { innerPadding ->
-        LazyVerticalGridExample(
+        FlowRowExample(
             modifier = Modifier.padding(innerPadding)
         )
     }
 }
 
-@OptIn(ExperimentalFoundationApi::class)
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
-fun LazyVerticalGridExample(
+fun FlowRowExample(
     modifier: Modifier = Modifier
 ) {
-    val items = (1..20).map { "Item $it" }
+    val tags = listOf("Kotlin", "Compose", "UI", "Grid", "Responsive", "Material")
 
-    LazyVerticalGrid(
-        columns = GridCells.Fixed(2),
-        modifier = modifier.fillMaxSize(),
-        contentPadding = PaddingValues(8.dp),
-        verticalArrangement = Arrangement.spacedBy(8.dp),
-        horizontalArrangement = Arrangement.spacedBy(8.dp)
+    FlowRow(
+        modifier = modifier.padding(16.dp),
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
+        verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
-        items(items.size) {
-            Card(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .aspectRatio(1f),
-                elevation = CardDefaults.cardElevation(4.dp)
+        tags.forEach { tag ->
+            Surface(
+                shape = RoundedCornerShape(50),
+                color = Color.LightGray
             ) {
-                Box(contentAlignment = Alignment.Center) {
-                    Text(items[it])
-                }
+                Text(tag, modifier = Modifier.padding(8.dp))
             }
         }
     }
@@ -85,6 +73,6 @@ fun LazyVerticalGridExample(
 
 @Preview
 @Composable
-fun Sample1ScreenPreview() {
-    Sample1Screen(onNavigateBack = {})
+fun FlowRowScreenPreview() {
+    FlowRowScreen(onNavigateBack = {})
 }

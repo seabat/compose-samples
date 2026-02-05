@@ -53,24 +53,24 @@ fun HomeScreen(
             )
 
             Button(
-                onClick = { onNavigateToSample(Screen.Sample1.route) },
+                onClick = { onNavigateToSample(Screen.LazyVerticalGrid.route) },
                 modifier = Modifier.fillMaxWidth()
             ) {
-                Text(Screen.Sample1.route)
+                Text(Screen.LazyVerticalGrid.route)
             }
 
             Button(
-                onClick = { onNavigateToSample(Screen.Sample2.route) },
+                onClick = { onNavigateToSample(Screen.StaggeredGrid.route) },
                 modifier = Modifier.fillMaxWidth()
             ) {
-                Text(Screen.Sample2.route)
+                Text(Screen.StaggeredGrid.route)
             }
 
             Button(
-                onClick = { onNavigateToSample(Screen.Sample3.route) },
+                onClick = { onNavigateToSample(Screen.FlowRow.route) },
                 modifier = Modifier.fillMaxWidth()
             ) {
-                Text(Screen.Sample3.route)
+                Text(Screen.FlowRow.route)
             }
         }
     }

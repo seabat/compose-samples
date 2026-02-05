@@ -1,35 +1,34 @@
 package dev.seabat.android.compose.samplelist.screens
 
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.FlowRow
-import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material3.Card
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun Sample3Screen(
+fun StaggeredGridScreen(
     onNavigateBack: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Flow Row") },
+                title = { Text("Staggered Grid") },
                 navigationIcon = {
                     IconButton(onClick = onNavigateBack) {
                         Icon(
@@ -42,30 +41,39 @@ fun Sample3Screen(
         },
         modifier = modifier
     ) { innerPadding ->
-        FlowRowExample(
+        CustomStaggeredGrid(
+            items = (1..40).map { "Item $it" },
             modifier = Modifier.padding(innerPadding)
         )
     }
 }
 
-@OptIn(ExperimentalLayoutApi::class)
 @Composable
-fun FlowRowExample(
+fun CustomStaggeredGrid(
+    items: List<String>,
     modifier: Modifier = Modifier
 ) {
-    val tags = listOf("Kotlin", "Compose", "UI", "Grid", "Responsive", "Material")
+    Row(modifier = modifier.fillMaxWidth()) {
+        val column1 = items.filterIndexed { index, _ -> index % 2 == 0 }
+        val column2 = items.filterIndexed { index, _ -> index % 2 != 0 }
 
-    FlowRow(
-        modifier = modifier.padding(16.dp),
-        horizontalArrangement = Arrangement.spacedBy(8.dp),
-        verticalArrangement = Arrangement.spacedBy(8.dp)
-    ) {
-        tags.forEach { tag ->
-            Surface(
-                shape = RoundedCornerShape(50),
-                color = Color.LightGray
-            ) {
-                Text(tag, modifier = Modifier.padding(8.dp))
+        LazyColumn(modifier = Modifier.weight(1f)) {
+            items(column1) {
+                Card(modifier = Modifier
+                    .padding(8.dp)
+                    .fillMaxWidth()) {
+                    Text(text = it, modifier = Modifier.padding(16.dp))
+                }
+            }
+        }
+
+        LazyColumn(modifier = Modifier.weight(1f)) {
+            items(column2) {
+                Card(modifier = Modifier
+                    .padding(8.dp)
+                    .fillMaxWidth()) {
+                    Text(text = it, modifier = Modifier.padding(16.dp))
+                }
             }
         }
     }
@@ -73,6 +81,6 @@ fun FlowRowExample(
 
 @Preview
 @Composable
-fun Sample3ScreenPreview() {
-    Sample3Screen(onNavigateBack = {})
+fun StaggeredGridScreenPreview() {
+    StaggeredGridScreen(onNavigateBack = {})
 }
