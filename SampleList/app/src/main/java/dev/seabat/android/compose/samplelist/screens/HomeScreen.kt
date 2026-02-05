@@ -52,37 +52,13 @@ fun HomeScreen(
                 modifier = Modifier.padding(bottom = 16.dp)
             )
 
-            Button(
-                onClick = { onNavigateToSample(Screen.LazyVerticalGrid.route) },
-                modifier = Modifier.fillMaxWidth()
-            ) {
-                Text(Screen.LazyVerticalGrid.route)
-            }
-
-            Button(
-                onClick = { onNavigateToSample(Screen.StaggeredGrid.route) },
-                modifier = Modifier.fillMaxWidth()
-            ) {
-                Text(Screen.StaggeredGrid.route)
-            }
-
-            Button(
-                onClick = { onNavigateToSample(Screen.FlowRow.route) },
-                modifier = Modifier.fillMaxWidth()
-            ) {
-                Text(Screen.FlowRow.route)
-            }
-            Button(
-                onClick = { onNavigateToSample(Screen.AnimateExpandableList.route) },
-                modifier = Modifier.fillMaxWidth()
-            ) {
-                Text(Screen.AnimateExpandableList.route)
-            }
-            Button(
-                onClick = { onNavigateToSample(Screen.StickyHeader.route) },
-                modifier = Modifier.fillMaxWidth()
-            ) {
-                Text(Screen.StickyHeader.route)
+            Screen.sampleScreens.forEach { screen ->
+                Button(
+                    onClick = { onNavigateToSample(screen.route) },
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Text(screen.route)
+                }
             }
         }
     }
