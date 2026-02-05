@@ -9,6 +9,7 @@ import dev.seabat.android.compose.samplelist.screens.HomeScreen
 import dev.seabat.android.compose.samplelist.screens.LazyVerticalGridScreen
 import dev.seabat.android.compose.samplelist.screens.StaggeredGridScreen
 import dev.seabat.android.compose.samplelist.screens.FlowRowScreen
+import dev.seabat.android.expandablelist.AnimateExpandableListScreen
 
 @Composable
 fun NavGraph(
@@ -46,6 +47,14 @@ fun NavGraph(
 
         composable(Screen.FlowRow.route) {
             FlowRowScreen(
+                onNavigateBack = {
+                    navController.popBackStack()
+                }
+            )
+        }
+
+        composable(Screen.AnimateExpandableList.route) {
+            AnimateExpandableListScreen(
                 onNavigateBack = {
                     navController.popBackStack()
                 }

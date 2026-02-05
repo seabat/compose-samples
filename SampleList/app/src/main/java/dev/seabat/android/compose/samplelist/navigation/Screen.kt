@@ -5,4 +5,5 @@ sealed class Screen(val route: String) {
     object LazyVerticalGrid : Screen("LazyVerticalGrid")
     object StaggeredGrid : Screen("StaggeredGrid")
     object FlowRow : Screen("FlowRow")
+    object AnimateExpandableList : Screen("AnimateExpandableList")
 }

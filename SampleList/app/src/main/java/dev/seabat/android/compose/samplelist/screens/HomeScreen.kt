@@ -72,6 +72,12 @@ fun HomeScreen(
             ) {
                 Text(Screen.FlowRow.route)
             }
+            Button(
+                onClick = { onNavigateToSample(Screen.AnimateExpandableList.route) },
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Text(Screen.AnimateExpandableList.route)
+            }
         }
     }
 }
