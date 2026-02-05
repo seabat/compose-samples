@@ -52,25 +52,13 @@ fun HomeScreen(
                 modifier = Modifier.padding(bottom = 16.dp)
             )
 
-            Button(
-                onClick = { onNavigateToSample(Screen.Sample1.route) },
-                modifier = Modifier.fillMaxWidth()
-            ) {
-                Text(Screen.Sample1.route)
-            }
-
-            Button(
-                onClick = { onNavigateToSample(Screen.Sample2.route) },
-                modifier = Modifier.fillMaxWidth()
-            ) {
-                Text(Screen.Sample2.route)
-            }
-
-            Button(
-                onClick = { onNavigateToSample(Screen.Sample3.route) },
-                modifier = Modifier.fillMaxWidth()
-            ) {
-                Text(Screen.Sample3.route)
+            Screen.sampleScreens.forEach { screen ->
+                Button(
+                    onClick = { onNavigateToSample(screen.route) },
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Text(screen.route)
+                }
             }
         }
     }

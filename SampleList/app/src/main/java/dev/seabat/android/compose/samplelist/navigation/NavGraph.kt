@@ -6,9 +6,11 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import dev.seabat.android.compose.samplelist.screens.HomeScreen
-import dev.seabat.android.compose.samplelist.screens.Sample1Screen
-import dev.seabat.android.compose.samplelist.screens.Sample2Screen
-import dev.seabat.android.compose.samplelist.screens.Sample3Screen
+import dev.seabat.android.compose.samplelist.screens.LazyVerticalGridScreen
+import dev.seabat.android.compose.samplelist.screens.StaggeredGridScreen
+import dev.seabat.android.compose.samplelist.screens.FlowRowScreen
+import dev.seabat.android.compose.samplelist.screens.StickyHeaderScreen
+import dev.seabat.android.expandablelist.AnimateExpandableListScreen
 
 @Composable
 fun NavGraph(
@@ -28,28 +30,45 @@ fun NavGraph(
             )
         }
 
-        composable(Screen.Sample1.route) {
-            Sample1Screen(
+        composable(Screen.LazyVerticalGrid.route) {
+            LazyVerticalGridScreen(
                 onNavigateBack = {
                     navController.popBackStack()
                 }
             )
         }
 
-        composable(Screen.Sample2.route) {
-            Sample2Screen(
+        composable(Screen.StaggeredGrid.route) {
+            StaggeredGridScreen(
                 onNavigateBack = {
                     navController.popBackStack()
                 }
             )
         }
 
-        composable(Screen.Sample3.route) {
-            Sample3Screen(
+        composable(Screen.FlowRow.route) {
+            FlowRowScreen(
                 onNavigateBack = {
                     navController.popBackStack()
                 }
             )
         }
+
+        composable(Screen.AnimateExpandableList.route) {
+            AnimateExpandableListScreen(
+                onNavigateBack = {
+                    navController.popBackStack()
+                }
+            )
+        }
+
+        composable(Screen.StickyHeader.route) {
+            StickyHeaderScreen(
+                onNavigateBack = {
+                    navController.popBackStack()
+                }
+            )
+        }
+
     }
 }
