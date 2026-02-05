@@ -11,15 +11,6 @@ Jetpack Compose のサンプル集
 <img src="user-rating-bar/docs/Screenshot_1.png" width="200"> 
 
 
-## expandable-list 
-
-An animated expandable list using LazyColumn in Jetpack Compose.  
-
-参考記事: [Building a Custom Animated Expandable/Collapsed List Component with Jetpack Compose Using LazyColumn](https://medium.com/@ramadan123sayed/building-a-custom-animated-expandable-list-with-jetpack-compose-1774a9328a32)  
-
-<img src="expandable-list/docs/Screenshot_1.png" width="200"> 
-
-
 ## SampleAnimation
 
 Jetpack Compose のアニメーションサンプル集。
@@ -32,9 +23,15 @@ Jetpack Compose のアニメーションサンプル集。
 
 Jetpack Compose の List のサンプル集。
 
-参考記事: [Jetpack Compose 8: List and Grid Components with Examples](hhttps://medium.com/@ashfaque-khokhar/jetpack-compose-8-list-and-grid-components-with-examples-1ae952decca0)
+参考記事: [Jetpack Compose 8: List and Grid Components with Examples](hhttps://medium.com/@ashfaque-khokhar/jetpack-compose-8-list-and-grid-components-with-examples-1ae952decca0)  
 
-<img src="SampleList/docs/sample_list.gif" width="200">
+<img src="SampleList/docs/sample_list.gif" width="200">  
+
+<br/>  
+
+参考記事: [Building a Custom Animated Expandable/Collapsed List Component with Jetpack Compose Using LazyColumn](https://medium.com/@ramadan123sayed/building-a-custom-animated-expandable-list-with-jetpack-compose-1774a9328a32)  
+
+<img src="SampleList/docs/ExpandableList.png" width="200">  
 
 ## SampleCanvas
 
