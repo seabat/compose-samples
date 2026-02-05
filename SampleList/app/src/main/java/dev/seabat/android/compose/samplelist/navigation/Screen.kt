@@ -6,4 +6,6 @@ sealed class Screen(val route: String) {
     object StaggeredGrid : Screen("StaggeredGrid")
     object FlowRow : Screen("FlowRow")
     object AnimateExpandableList : Screen("AnimateExpandableList")
+    object StickyHeader : Screen("StickyHeader")
+
 }

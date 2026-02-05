@@ -33,6 +33,13 @@ Jetpack Compose の List のサンプル集。
 
 <img src="SampleList/docs/ExpandableList.png" width="200">  
 
+<br/>  
+
+参考記事: [Jetpack Compose LazyColumn Sticky Header: Complete Implementation Guide](https://medium.com/softaai-blogs/jetpack-compose-lazycolumn-sticky-header-complete-implementation-guide-a102c9b4f2a6)  
+
+<img src="SampleList/docs/StickyHeader.gif" width="200">  
+
+
 ## SampleCanvas
 
 Jetpack Compose の Canvas API サンプル集。

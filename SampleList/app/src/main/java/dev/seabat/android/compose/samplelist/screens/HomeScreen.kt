@@ -78,6 +78,12 @@ fun HomeScreen(
             ) {
                 Text(Screen.AnimateExpandableList.route)
             }
+            Button(
+                onClick = { onNavigateToSample(Screen.StickyHeader.route) },
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Text(Screen.StickyHeader.route)
+            }
         }
     }
 }
