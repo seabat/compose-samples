@@ -45,3 +45,12 @@ Jetpack Compose の List のサンプル集。
 Jetpack Compose の Canvas API サンプル集。
 
 <img src="SampleCanvas/docs/sample-canvas.gif" width="200">
+
+## Hello SharedTransitionLayout
+
+SharedTransitionLayout API のサンプル。
+
+
+<img src="HelloSharedElementTransition/docs/SharedTransitionLayout.gif" width="200">
+
+
